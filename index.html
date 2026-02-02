@@ -2,12 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>A Valentine's Day Surprise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+      html { -webkit-text-size-adjust: 100%; }
+      @media (max-width: 430px) {
+        .container { justify-content: flex-start; align-content: start; }
+        #landing-page { padding-top: calc(80px + env(safe-area-inset-top)); }
+        #landing-page h1 {
+          font-size: clamp(1.1rem, 5.5vw, 1.6rem) !important;
+          line-height: 1.25;
+          max-width: 92vw;
+          padding: 0 16px;
+          margin: 0 auto 16px;
+          white-space: normal;
+          word-break: break-word;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+        }
+        .chat-image { max-height: 46vh !important; }
+        #transition-caption { font-size: 0.95rem !important; }
+      }
+    </style>
 </head>
 <body>
     <div class="container" id="landing-page">

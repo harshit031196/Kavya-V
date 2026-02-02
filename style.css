@@ -7,7 +7,8 @@ body {
     height: 100vh;
     height: 100dvh; /* iOS Safari modern viewport */
     min-height: 100svh; /* support for small viewport on iOS */
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: background-color 1s ease;
 }
 
@@ -63,6 +64,9 @@ body::after {
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 12px;
     position: relative;
     z-index: 1; /* keep above background blobs */
     opacity: 0;
@@ -80,6 +84,12 @@ body::after {
     font-weight: 500;
     margin-bottom: 40px;
     animation: fadeIn 2s ease-in-out;
+    max-width: 92vw;
+    padding: 0 16px;
+    line-height: 1.2;
+    word-break: break-word;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chat-image {
@@ -87,7 +97,7 @@ body::after {
     height: auto;
     border-radius: 16px;
     margin-bottom: 30px;
-    max-height: 72vh; /* larger image on landing */
+    max-height: 60vh; /* better fit on small screens */
     box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
